@@ -44,7 +44,7 @@ export default function MovieId({ movie }) {
           <h5>
             Genres:{" "}
             {genres?.map((genre, index) => (
-              <span style={{fontSize: "12px"}} key={genre.id}>
+              <span style={{ fontSize: "12px" }} key={genre.id}>
                 {genre.name}
                 {index < genres.length - 1 && ", "}
               </span>
@@ -61,12 +61,9 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
 
   try {
-    const res = await fetch(
-      `${process.env.BASE_URL || "http://localhost:3000"}/api/movie/${id}`
-    );
+    const res = await fetch(`/api/movie/${id}`);
     const data = await res.json();
 
-  
     if (data.error) {
       return { notFound: true };
     }
@@ -80,6 +77,5 @@ export async function getServerSideProps(context) {
     return { notFound: true };
   }
 }
-
 
 // localhost:port/movies/[id].js

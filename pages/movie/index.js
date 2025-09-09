@@ -63,7 +63,7 @@ export default function Movies({ allItems }) {
 // localhost:port/movies
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/movie");
+  const res = await fetch("/api/movie");
   const data = await res.json();
 
   const moviesWithType = data.movies.map((item) => ({

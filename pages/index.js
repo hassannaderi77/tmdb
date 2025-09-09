@@ -100,7 +100,7 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/topRated");
+  const res = await fetch("/api/topRated");
   const data = await res.json();
 
   const moviesWithType = data.movies.map((item) => ({

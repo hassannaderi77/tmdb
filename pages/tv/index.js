@@ -58,7 +58,7 @@ export default function Series({ allItems }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/tv");
+  const res = await fetch("/api/tv");
   const data = await res.json();
 
   const tvWithType = data.tvShows.map((item) => ({ ...item, type: "tv" }));
