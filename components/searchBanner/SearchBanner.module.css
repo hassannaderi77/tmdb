@@ -1,0 +1,89 @@
+.items {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -10px;
+    background-color: #f4f0f0cf;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.items a {
+  text-decoration: none;
+  color: black;
+}
+
+.items::-webkit-scrollbar {
+    width: 8px;         
+}
+
+.items::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.items::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.4); 
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.items::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.item {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.item img {
+    width: 50px;
+    border-radius: 10px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+     gap: 20px;
+}
+
+.circle {
+  --size: 40px; /* اندازه دایره */
+  --border: 3px; /* ضخامت نوار */
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: conic-gradient(
+    hsl(var(--hue), 100%, 45%) calc(var(--percentage) * 1%),
+    #e0e0e0 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  position: relative;
+}
+
+/* برای ایجاد دایره خالی داخل (شبیه donut) */
+.circle::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 2 * var(--border));
+  height: calc(100% - 2 * var(--border));
+  background: #081c22;
+  border-radius: 50%;
+}
+
+.circle p {
+  z-index: 5;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}

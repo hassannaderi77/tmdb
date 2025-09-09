@@ -1,0 +1,32 @@
+.dataa {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.data::-webkit-scrollbar-thumb {
+  background-color: #032541;
+  border-radius: 4px;
+}
+
+.data::-webkit-scrollbar {
+  height: 8px;
+}
+
+.data {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 80px;
+}
+
+.card img {
+    width: 150px;
+    border-radius: 10px;
+}

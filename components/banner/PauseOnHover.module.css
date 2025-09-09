@@ -1,0 +1,40 @@
+.contain {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 80px;
+  cursor: pointer;
+  height: 250px;
+}
+
+.slide {
+  padding: 0 10px; 
+  outline: none;
+}
+
+
+.slide img {
+  width: 100%;
+  max-width: 380px; 
+  border-radius: 10px;
+  display: block;
+}
+
+
+.slide p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.slider-container .slick-slide:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 767px) {
+.slide p {
+    font-size: 10px;
+  }
+}
