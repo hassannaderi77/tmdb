@@ -100,7 +100,7 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("/api/topRated");
+  const res = await fetch(`${process.env.BASE_URL}/api/topRated`);
   const data = await res.json();
 
   const moviesWithType = data.movies.map((item) => ({

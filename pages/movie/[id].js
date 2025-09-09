@@ -61,7 +61,7 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
 
   try {
-    const res = await fetch(`/api/movie/${id}`);
+    const res = await fetch(`${process.env.BASE_URL}/api/movie/${id}`);
     const data = await res.json();
 
     if (data.error) {
