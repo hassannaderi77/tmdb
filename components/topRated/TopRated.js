@@ -18,11 +18,12 @@ export default function TopRated({
       <Link href={`/${type}/${id}`}>
         <div className={styles.card}>
           <img
-            src={
-              poster_path
-                ? `https://image.tmdb.org/t/p/w500${poster_path}`
-                : "/images/people.jpg"
-            }
+          src="/images/poster404.png"
+            // src={
+            //   poster_path
+            //     ? `https://image.tmdb.org/t/p/w500${poster_path}`
+            //     : "/images/people.jpg"
+            // }
             alt=""
           />
           <div className={styles.rate}>

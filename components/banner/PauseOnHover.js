@@ -25,7 +25,8 @@ export default function PauseOnHover({ dataUpComing }) {
           {dataUpComing.map((item) => (
             <div key={item.id} className={styles.slide}>
               <img
-                src={item.fullBackdrop}
+                // src={item.fullBackdrop}
+                src="/images/poster404.png"
                 onError={(e) => {
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = "/images/poster404.png";

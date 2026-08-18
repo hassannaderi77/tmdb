@@ -9,10 +9,15 @@ export default function SearchBanner({ searchBanner }) {
           <Link href={`/${item.type}/${item.id}`}>
             <div key={item.id} className={styles.item}>
               <div>
-                <img src={item.fullPoster || "/images/poster404.png"} onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = "/images/poster404.png"
-                }}  alt="" />
+                <img
+                  // src={item.fullPoster || "/images/poster404.png"}
+                  src="/images/poster404.png"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = "/images/poster404.png";
+                  }}
+                  alt=""
+                />
               </div>
               <div className={styles.detail}>
                 <p>
