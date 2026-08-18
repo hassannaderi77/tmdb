@@ -17,10 +17,14 @@ export default function MovieId({ movie }) {
     <>
       <div
         className={styles.container}
-        style={{ backgroundImage: `url(${fullBackdrop})` }}
+        // style={{ backgroundImage: `url(${fullBackdrop})` }}
+        style={{backgroundImage: 'url(/images/banner404.png)'}}
       >
         <div>
-          <img src={fullPoster} alt="" />
+          <img 
+          // src={fullPoster}
+          src="/images/banner404.png"
+           alt="" />
         </div>
         <div className={styles.details}>
           <h1>
