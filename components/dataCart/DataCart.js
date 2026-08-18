@@ -9,11 +9,12 @@ export default function DataCart({data}) {
       <Link href={`/${data.type}/${data.id}`}>
         <div className={styles.card}>
           <img
-            src={
-              data.poster_path
-                ? `https://image.tmdb.org/t/p/w500${data.poster_path}`
-                : "/images/people.jpg"
-            }
+            // src={
+            //   data.poster_path
+            //     ? `https://image.tmdb.org/t/p/w500${data.poster_path}`
+            //     : "/images/people.jpg"
+            // }
+            src="/images/poster404.png"
             alt=""
           />
           <div className={styles.rate}>
